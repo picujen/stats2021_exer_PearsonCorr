@@ -4,6 +4,20 @@ output:
   md_document:
     variant: markdown_github
 ---
+```{r}
+data=rio::import("Exam Anxiety.sav")
+```
+```{r}
+jmv::corrMatrix(
+    data = data,
+    vars = vars(Revise, Exam, Anxiety),
+    flag = TRUE,
+    n = TRUE,
+    ci = TRUE,
+    plots = TRUE,
+    plotDens = TRUE,
+    plotStats = TRUE)
+```
 
 #  Correlation
 
